@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<!-- Metadata -->
+		<key>PayloadVersion</key>
+		<integer>1</integer>
+		<key>PayloadUUID</key>
+		<string>0f5f571f-3e52-4dc6-a06a-776292e00160</string>
+		<key>PayloadIdentifier</key>
+		<string>dev.httxrafa.network.profile</string>
+		<key>PayloadType</key>
+		<string>Configuration</string>
+		<key>PayloadOrganization</key>
+		<string>HttxLab</string>
+
+		<!-- Name/Description -->
+		<key>PayloadDisplayName</key>
+		<string>6bc9adb1 Wi-Fi Profile</string>
+		<key>PayloadDescription</key>
+		<string>Provisioning profile to connect to 6bc9adb1 using WPA3/WPA2-Enterprise (EAP-TTLS with PAP). This profile does not include CA or server certificates. The device will validate the server certificate against its system trust store and verify the server hostname matches auth.httxrafa.dev.</string>
+
+		<!-- Consent -->
+		<key>ConsentText</key>
+		<dict>
+			<key>de</key>
+			<string>{{ DE_TOS }}</string>
+			<key>default</key>
+			<string>{{ EN_TOS }}</string>
+		</dict>
+
+		<!-- Content -->
+		<key>PayloadContent</key>
+		<array>
+			<dict>
+				<!-- Network -->
+				<key>SSID_STR</key>
+				<string>6bc9adb1</string>
+				<key>HIDDEN_NETWORK</key>
+				<false/>
+				<key>IsHotspot</key>
+				<false/>
+
+				<!-- Connection Settings -->
+				<key>AutoJoin</key>
+				<true/>
+				<key>CaptiveBypass</key>
+				<false/>
+				<key>ProxyType</key>
+				<string>None</string>
+
+				<!-- Encryption -->
+				<key>EncryptionType</key>
+				<string>WPA</string>
+
+				<!-- Authorization -->
+				<key>EAPClientConfiguration</key>
+				<dict>
+					<!-- TTLS with PAP -->
+					<key>AcceptEAPTypes</key>
+					<array>
+						<!-- TTLS -->
+						<integer>21</integer>
+					</array>
+					<key>TTLSInnerAuthentication</key>
+					<string>PAP</string>
+
+					<!-- Certificate -->
+					<key>TLSTrustedServerNames</key>
+					<array>
+						<string>auth.httxrafa.dev</string>
+					</array>
+
+					<!-- Only allow trusted -->
+					<key>TLSAllowTrustExceptions</key>
+					<false/>
+
+					<!-- TLS Settings -->
+					<key>TLSMinimumVersion</key>
+					<string>1.2</string>
+
+					<!-- Unencrypted Identity -->
+					<key>OuterIdentity</key>
+					<string>anonymous</string>
+				</dict>
+
+				<!-- Metadata -->
+				<key>PayloadVersion</key>
+				<integer>1</integer>
+				<key>PayloadUUID</key>
+				<string>81bfeefd-2932-45e3-b98a-d16d3c083722</string>
+				<key>PayloadIdentifier</key>
+				<string>dev.httxrafa.network.profile.wifi</string>
+				<key>PayloadType</key>
+				<string>com.apple.wifi.managed</string>
+			</dict>
+		</array>
+	</dict>
+</plist>
